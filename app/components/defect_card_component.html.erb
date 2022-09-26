@@ -1,72 +1,74 @@
 <div
-        class="flex flex-col max-w-[40%] p-4 border shadow-sm bg-white hover:shadow-md hover:bg-white/40 cursor-pointer"
+    class="flex flex-col max-w-[40%] p-4 border shadow-sm bg-white hover:shadow-md hover:bg-white/40 cursor-pointer"
+  >
+    <div class="relative">
+
+      <!-- CREATE A CHECKBOX COMPONENT AND REPLACE THIS -->
+      <%= render(CheckboxComponent.new) do %>
+      <% end %>
+
+      <div
+        class="absolute top-3 right-2 bg-[#C3752D] p-2 flex items-center gap-2 rounded text-white"
       >
-        <div class="relative">
-          <input type="checkbox" class="absolute m-3" />
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+        </svg>
 
-          <!-- TAG WITH ICON -->
-          <div
-            class="absolute top-3 right-2 bg-[#C3752D] p-2 flex items-center gap-2 rounded text-white"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-</svg>
+        <p class="text-xs">Handover Inspection</p>
+      </div>
+      <div
+        class="absolute bottom-3 left-2 bg-[#C32D2D] p-2 flex items-center gap-2 rounded text-white"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
 
-            <p class="text-xs">Handover Inspection</p>
-          </div>
-          <div
-            class="absolute bottom-3 left-2 bg-[#C32D2D] p-2 flex items-center gap-2 rounded text-white"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
+        <p class="text-xs">12 days overdue</p>
+      </div>
+      <div class="w-full">
+        <img
+          src="https://www.1855gotpaving.com/wp-content/uploads/2019/04/Got-Paving-Driveway-Drainage-Problems.jpg"
+          alt="Driveway Fault"
+          class="rounded"
+        />
+      </div>
+    </div>
+    <div class="flex items-center py-2 gap-2">
+      <p class="text-[#1696AF]">3833</p>
+      <%= render(BadgeComponent.new(title: "status")) do %>
+        With Subcontractor
+      <% end %>
+    </div>
+    <p class="font-semibold text-xl py-0">Civil Works - Driveway Fault</p>
+    <div class="flex flex-row items-center justify-between pt-2">
+      <div
+        class="flex flex-col md:flex-row text-slate-400 md:gap-4 text-sm"
+      >
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M3 2.25a.75.75 0 01.75.75v.54l1.838-.46a9.75 9.75 0 016.725.738l.108.054a8.25 8.25 0 005.58.652l3.109-.732a.75.75 0 01.917.81 47.784 47.784 0 00.005 10.337.75.75 0 01-.574.812l-3.114.733a9.75 9.75 0 01-6.594-.77l-.108-.054a8.25 8.25 0 00-5.69-.625l-2.202.55V21a.75.75 0 01-1.5 0V3A.75.75 0 013 2.25z" clip-rule="evenodd" />
+        </svg>
 
-            <p class="text-xs">12 days overdue</p>
-          </div>
-          <div class="w-full">
-            <img
-              src="https://www.1855gotpaving.com/wp-content/uploads/2019/04/Got-Paving-Driveway-Drainage-Problems.jpg"
-              alt="Driveway Fault"
-              class="rounded"
-            />
-          </div>
+          <p class="px-2">22/01/2022</p>
         </div>
-        <div class="flex items-center py-2 gap-2">
-          <p class="text-[#1696AF]">3833</p>
-          <%= render(BadgeComponent.new(title: "status")) do %>
-            With Subcontractor
-          <% end %>
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97-1.94.284-3.916.455-5.922.505a.39.39 0 00-.266.112L8.78 21.53A.75.75 0 017.5 21v-3.955a48.842 48.842 0 01-2.652-.316c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97z" clip-rule="evenodd" />
+        </svg>
+
+          <p class="px-2">12</p>
         </div>
-        <p class="font-semibold text-xl py-0">Civil Works - Driveway Fault</p>
-        <div class="flex flex-row items-center justify-between pt-2">
-          <div
-            class="flex flex-col md:flex-row text-slate-400 md:gap-4 text-sm"
-          >
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-  <path fill-rule="evenodd" d="M3 2.25a.75.75 0 01.75.75v.54l1.838-.46a9.75 9.75 0 016.725.738l.108.054a8.25 8.25 0 005.58.652l3.109-.732a.75.75 0 01.917.81 47.784 47.784 0 00.005 10.337.75.75 0 01-.574.812l-3.114.733a9.75 9.75 0 01-6.594-.77l-.108-.054a8.25 8.25 0 00-5.69-.625l-2.202.55V21a.75.75 0 01-1.5 0V3A.75.75 0 013 2.25z" clip-rule="evenodd" />
-</svg>
+        <div class="flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M18.97 3.659a2.25 2.25 0 00-3.182 0l-10.94 10.94a3.75 3.75 0 105.304 5.303l7.693-7.693a.75.75 0 011.06 1.06l-7.693 7.693a5.25 5.25 0 11-7.424-7.424l10.939-10.94a3.75 3.75 0 115.303 5.304L9.097 18.835l-.008.008-.007.007-.002.002-.003.002A2.25 2.25 0 015.91 15.66l7.81-7.81a.75.75 0 011.061 1.06l-7.81 7.81a.75.75 0 001.054 1.068L18.97 6.84a2.25 2.25 0 000-3.182z" clip-rule="evenodd" />
+        </svg>
 
-              <p class="px-2">22/01/2022</p>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-  <path fill-rule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97-1.94.284-3.916.455-5.922.505a.39.39 0 00-.266.112L8.78 21.53A.75.75 0 017.5 21v-3.955a48.842 48.842 0 01-2.652-.316c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97z" clip-rule="evenodd" />
-</svg>
-
-              <p class="px-2">12</p>
-            </div>
-            <div class="flex items-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
-              <path fill-rule="evenodd" d="M18.97 3.659a2.25 2.25 0 00-3.182 0l-10.94 10.94a3.75 3.75 0 105.304 5.303l7.693-7.693a.75.75 0 011.06 1.06l-7.693 7.693a5.25 5.25 0 11-7.424-7.424l10.939-10.94a3.75 3.75 0 115.303 5.304L9.097 18.835l-.008.008-.007.007-.002.002-.003.002A2.25 2.25 0 015.91 15.66l7.81-7.81a.75.75 0 011.061 1.06l-7.81 7.81a.75.75 0 001.054 1.068L18.97 6.84a2.25 2.25 0 000-3.182z" clip-rule="evenodd" />
-            </svg>
-
-              <p class="px-2">5</p>
-            </div>
-          </div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1696AF" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
-</svg>
-
+          <p class="px-2">5</p>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#1696AF" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+    </svg>
+
+    </div>
+</div>
