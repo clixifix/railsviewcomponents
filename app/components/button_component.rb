@@ -5,8 +5,9 @@ class ButtonComponent < ViewComponent::Base
 
   PRIMARY_CLASSES = %w[
     disabled:bg-[#1696AF]/20
+    focus:ring-4
     focus:bg-[#1696AF]/60
-    hover:bg-[#1696AF]/80
+    hover:bg-[#1696AF]/90
     bg-[#1696AF]
     border
     border-[#1696AF]
@@ -27,7 +28,7 @@ class ButtonComponent < ViewComponent::Base
     items-center
     gap-2
     cursor-pointer
-    rounded-sm
+    rounded-md
     transition
     duration-200
     text-center

@@ -10,8 +10,8 @@ class TabItemComponent < ViewComponent::Base
         flex 
         items-center 
         gap-2 
-        py-3
-        px-6 
+        py-4
+        px-8
         cursor-pointer
         hover:bg-cyan-100/20
     ].freeze
