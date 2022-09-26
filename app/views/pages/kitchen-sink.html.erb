@@ -1,0 +1,78 @@
+<div class=" mx-auto mt-4 px-5">
+<h1 class="text-[#1696AF] text-3xl font-extrabold">ViewComponents</h1>
+<p class="text-sm">This page will demo our ViewComponents</p>
+
+<div class="my-6">
+<h2>Button Component</h2>
+
+<div class="flex gap-12">
+
+<div>
+<h3>Primary</h3>
+<%= render(ButtonComponent.new(type: :primary)) do %>
+    Submit
+<% end %>
+</div>
+
+<div>
+<h3>Secondary</h3>
+<%= render(ButtonComponent.new(type: :outline)) do %>
+    Lets go... 
+<% end %>
+</div>
+
+<div>
+<h3>With Icon</h3>
+<%= render(ButtonComponent.new(type: :outline)) do %>
+    Download 
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+</svg>
+<% end %>
+</div>
+
+</div>
+
+<div class="my-6">
+<h2>Input Component</h2>
+<%= render(InputComponent.new(type: :primary)) do %>
+<% end %>
+</div>
+
+</div>
+
+<div class="my-4">
+<h2>Breadcrumb Component</h2>
+<%= render(BreadcrumbComponent.new) do %>
+<% end %>
+</div>
+
+<div class="my-4">
+<h2>Tabs Component</h2>
+<%= render TabsComponent.new do |c| %>
+    <% [{icon: "icona", title: "Defects", active: true},{icon: "iconb", title: "Audits", active: false}, {icon: "iconc", title: "Plot Contacts", active: false}, {icon: "iconc", title: "Meter Readings", active: false}].each do |item| %>
+     <% c.with_tab_item do %>
+        <%= render TabItemComponent.new(tab_item: item) =%>
+     <% end %>  
+    <% end %>  
+<% end %>
+</div>
+
+<div class="my-4">
+<h2>Badge Component</h2>
+<%= render(BadgeComponent.new(title: "my title")) do %>
+With Subcontractor
+<% end %>
+<%= render(BadgeComponent.new(title: "my title")) do %>
+Not yet nominated<% end %>
+</div>
+
+<div class="my-4">
+<h2>Defect Card Component</h2>
+<%= render(DefectCardComponent.new) do %>
+<% end %>
+</div>
+
+
+
+</div>
