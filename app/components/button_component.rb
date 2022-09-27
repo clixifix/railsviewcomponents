@@ -28,11 +28,12 @@ class ButtonComponent < ViewComponent::Base
     items-center
     gap-2
     cursor-pointer
-    rounded-md
+    rounded-sm
     transition
     duration-200
     text-center
     text-sm
+    font-semibold
     px-4 
     py-2
     whitespace-nowrap
