@@ -12,11 +12,11 @@
                 <span class="flex items-center gap-2 mb-1 ">
                     <h3 class="text-lg font-semibold text-gray-900">Path to Resolution Letter</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                     </svg>
                 </span>
                 <span>
-                <%= render(ButtonComponent.new(type: :outline)) do %>
+              <%= render(ButtonComponent.new(type: :outline)) do %>
                     View Letter
                 <% end %>
                 <%= render(ButtonComponent.new(type: :primary)) do %>
@@ -25,6 +25,13 @@
                 </span>
             </div>
             <time class="block mb-2 text-sm font-normal leading-none text-green-700">Due in 6 days</time>
+            <form class="flex flex-col mt-4 ml-4 md:w-[60%]">
+                <label class="text-slate-600 mb-2">What steps will you be taking to resolve this complaint?</label>
+                <textarea class="bg-white border-1 border-gray-200 rounded-sm " rows="4"></textarea>
+                <label class="text-slate-600 mt-6 mb-2">When do you hope to have this complaint resolved?</label>
+                <textarea class="bg-white border-1 border-gray-200 rounded-sm p-2" placeholder="Select date" rows="1"></textarea>
+            </form>
+            
         </li>
 
         <li class="mb-10 ml-8">
@@ -39,9 +46,6 @@
                     </svg>
                 </span>
                 <span>
-                <%= render(ButtonComponent.new(type: :outline)) do %>
-                    View Letter
-                <% end %>
                 <%= render(ButtonComponent.new(type: :primary)) do %>
                     Send Now
                 <% end %>
@@ -62,9 +66,6 @@
                     </svg>
                 </span>
                 <span>
-                <%= render(ButtonComponent.new(type: :outline)) do %>
-                    View Letter
-                <% end %>
                 <%= render(ButtonComponent.new(type: :primary)) do %>
                     Send Now
                 <% end %>
@@ -85,14 +86,12 @@
                     </svg>
                 </span>
                 <span>
-                <%= render(ButtonComponent.new(type: :outline)) do %>
-                    View Letter
-                <% end %>
                 <%= render(ButtonComponent.new(type: :primary)) do %>
                     Send Now
                 <% end %>
                 </span>
             </div>
+            <time class="block mb-2 text-sm font-normal leading-none text-green-700">Send when this complaint is resolved</time>
 
         </li>
         
