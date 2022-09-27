@@ -12,6 +12,8 @@ class ButtonComponent < ViewComponent::Base
     border
     border-[#1696AF]
     text-white
+    font-semibold
+
   ].freeze
   OUTLINE_CLASSES = %w[
     hover:bg-cyan-100/20
@@ -33,7 +35,6 @@ class ButtonComponent < ViewComponent::Base
     duration-200
     text-center
     text-sm
-    font-semibold
     px-4 
     py-2
     whitespace-nowrap
