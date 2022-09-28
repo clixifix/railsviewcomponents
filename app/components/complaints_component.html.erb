@@ -1,8 +1,12 @@
 <div class="bg-white p-6 border shadow-sm bg-white rounded-md">
     <ol class="relative border-l border-gray-200">                  
 
-        <%= render(ComplaintsLetterComponent.new) do %>            
+        <%# complaints_letter.each do | complaints_letter | %>
+
+        <%= render(ComplaintsLetterComponent.new(letter_title: "Written Acknowledgement Letter")) do %>  
         <% end %>
+
+        <%# The below needs extracting to the letter component %>
 
         <li class="mb-10 ml-8">
             
@@ -25,7 +29,7 @@
                 </span>
             </div>
             <time class="block mb-2 text-sm font-normal leading-none text-green-700">Due in 6 days</time>
-            <form class="flex flex-col mt-4 ml-4 md:w-[60%]">
+            <form class="flex flex-col mt-4 md:ml-4 md:w-[60%]">
                 <label class="text-slate-600 mb-2">What steps will you be taking to resolve this complaint?</label>
                 <textarea class="bg-white border-1 border-gray-200 rounded-sm " rows="4"></textarea>
                 <label class="text-slate-600 mt-6 mb-2">When do you hope to have this complaint resolved?</label>

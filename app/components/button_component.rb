@@ -13,7 +13,6 @@ class ButtonComponent < ViewComponent::Base
     border-[#1696AF]
     text-white
     font-semibold
-
   ].freeze
   OUTLINE_CLASSES = %w[
     hover:bg-cyan-100/20
