@@ -11,12 +11,13 @@
         </svg>
     </span>
     <span class="flex justify-between">
-        <span class="flex items-center gap-2">
-            <h3 class="mb-2 text-lg font-semibold text-gray-400"><%= @letter_title %></h3>
+        <span class="flex items-center gap-2 mb-4">
+<%# This color will be different depending on if sent/not sent %>
+            <h3 class="text-lg font-semibold text-slate-500"><%= @letter_title %></h3>
         </span>
         <span>
             <%= render(ButtonComponent.new(type: :outline).with_content("View Letter")) %>
         </span>
     </span>
-    <time class="block mb-2 text-sm font-normal leading-none text-slate-500">Sent 4 days ago</time>
+    <time class="block mb-2 text-sm font-normal leading-none text-slate-400">Sent 4 days ago</time>
 </li>

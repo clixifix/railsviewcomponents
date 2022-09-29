@@ -1,35 +1,47 @@
+<%= render(NavbarComponent.new) do %>
+    <% end %>
+
 <div class="px-5 bg-slate-200">
     <%= render(BreadcrumbComponent.new) do %>
     <% end %>
 </div>
 
-<section class="mx-auto mt-4 px-5">
+<section id="complaints" class="mx-auto mt-4 px-5">
     <div class="flex justify-between items-center">
-        <h3 class="my-6 text-2xl font-semibold text-slate-800">Complaint 2343<h3>
+        <div class="flex items-center gap-4">
+            <h3 class="my-6 text-2xl font-semibold text-slate-800">Complaint 2343<h3>
+            <%= render(BadgeComponent.new(title: "my title")) do %>
+            Accepted
+            <% end %>
+        </div>
         <%= render(ButtonComponent.new(type: :outline)) do %>
             Export all
         <% end %>
     </div>
-    <div class="my-4 flex gap-12">
-        <span>
-            <p class="text-sm text-slate-400">Received date:</p>
-            <p>10/03/2020</p>
+    <div class="my-4 flex flex-col md:flex-row gap-6 md:gap-12">
+        <span class="flex gap-12">
+            <span>
+                <p class="text-sm text-slate-400">Received date:</p>
+                <p>10/03/2020</p>
+            </span>
+            <span>
+                <p class="text-sm text-slate-400">From date:</p>
+                <p>22/06/2017</p>
+            </span>
+            <span>
+                <p class="text-sm text-slate-400">To date:</p>
+                <p>10/03/2020</p>
+            </span>
         </span>
-        <span>
-            <p class="text-sm text-slate-400">From date:</p>
-            <p>10/03/2020</p>
-        </span>
-        <span>
-            <p class="text-sm text-slate-400">To date:</p>
-            <p>10/03/2020</p>
-        </span>
-        <span>
-            <p class="text-sm text-slate-400">Raised by:</p>
-            <p>Mark Jacobs</p>
-        </span>
-        <span>
-            <p class="text-sm text-slate-400">Plot:</p>
-            <p class="text-[#1696AF] font-semibold underline cursor-pointer">Plot 1, 26 Aspen Mews</p>
+        <span class="flex gap-12">
+            <span>
+                <p class="text-sm text-slate-400">Raised by:</p>
+                <p>Mark Jacobs</p>
+            </span>
+            <span>
+                <p class="text-sm text-slate-400">Plot:</p>
+                <p class="text-[#1696AF] font-semibold underline cursor-pointer">Plot 1, 26 Aspen Mews</p>
+            </span>
         </span>
     </div>
 
@@ -52,8 +64,8 @@
     </div>
 </section>
 
-<section class="mx-auto mt-4 px-5">
-    <h3 class="my-6 text-lg font-light">Latest Activity</h3>
+<section id="latest_activity" class="mx-auto mt-4 px-5">
+    <h3 class="my-6 text-lg font-semibold">Latest Activity</h3>
         <div class="flex flex-col gap-4">
             <%= render(ActivityComponent.new(title: "Inbound Phone Call", message: "Customer called for a progress update. Explained that we woud be sending her a path to resolution letter within the next 3 days.")) do %>
             <% end %>
