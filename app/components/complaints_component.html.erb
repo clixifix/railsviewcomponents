@@ -49,9 +49,9 @@
             </span>
             <div class="flex justify-between">
                 <span class="flex items-center gap-2 mb-4">
-                    <h3 class="text-lg font-semibold text-gray-900">Assesment and Response Letter</h3>
+                    <h3 class="text-lg font-semibold text-gray-900">Complaint Assesment and Response Letter</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                     </svg>
                 </span>
                 <span>
@@ -61,6 +61,18 @@
                 </span>
             </div>
             <time class="block mb-2 text-sm font-normal leading-none text-green-700">Due in 26 days</time>
+            <%# This form would only show when the extend arrow has been clicked %>
+            <form class="flex-col mt-4 md:ml-4">
+                <div class="flex flex-col md:w-[60%] mb-4">
+                <label class="text-slate-600 mb-2">What steps have you taken so far to resolve this complaint?</label>
+                <textarea class="bg-white border-1 border-gray-200 rounded-sm " rows="4"></textarea>
+                <label class="text-slate-600 mt-6 mb-2">Do you wish to update the expected resolution date?</label>
+                <textarea class="bg-white border-1 border-gray-200 rounded-sm p-2" placeholder="Select date" rows="1"></textarea>
+                </div>
+                <%= render(ButtonComponent.new(type: :outline)) do %>
+                    Save
+                <% end %>
+            </form>
         </li>
 
         <li class="mb-10 ml-8">
@@ -71,7 +83,7 @@
                 <span class="flex items-center gap-2 mb-4">
                     <h3 class="text-lg font-semibold text-gray-900">Eight-week (56-day) Letter</h3>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
                     </svg>
                 </span>
                 <span>
@@ -81,6 +93,18 @@
                 </span>
             </div>
             <time class="block mb-2 text-sm font-normal leading-none text-green-700">Due in 52 days</time>
+            <%# This form would only show when the extend arrow has been clicked %>
+            <form class="flex-col mt-4 md:ml-4">
+                <div class="flex flex-col md:w-[60%] mb-4">
+                <label class="text-slate-600 mb-2">Why has this complaint not been resolved yet?</label>
+                <textarea class="bg-white border-1 border-gray-200 rounded-sm " rows="4"></textarea>
+                <label class="text-slate-600 mt-6 mb-2">What is the new expected resolution date?</label>
+                <textarea class="bg-white border-1 border-gray-200 rounded-sm p-2" placeholder="Select date" rows="1"></textarea>
+                </div>
+                <%= render(ButtonComponent.new(type: :outline)) do %>
+                    Save
+                <% end %>
+            </form>
         </li>
 
          <li class="mb-10 ml-8">
