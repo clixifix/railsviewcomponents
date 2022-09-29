@@ -1,0 +1,73 @@
+<div class="px-5 bg-slate-200">
+    <%= render(BreadcrumbComponent.new) do %>
+    <% end %>
+</div>
+
+<section class="mx-auto mt-4 px-5">
+    <div class="flex justify-between items-center">
+        <h3 class="my-6 text-2xl font-semibold text-slate-800">Complaint 2343<h3>
+        <%= render(ButtonComponent.new(type: :outline)) do %>
+            Export all
+        <% end %>
+    </div>
+    <div class="my-4 flex gap-12">
+        <div>
+            <p class="text-sm text-slate-400">Received date:</p>
+            <p>10/03/2020</p>
+        </div>
+        <div>
+            <p class="text-sm text-slate-400">From date:</p>
+            <p>10/03/2020</p>
+        </div>
+        <div>
+            <p class="text-sm text-slate-400">To date:</p>
+            <p>10/03/2020</p>
+        </div>
+        <div>
+            <p class="text-sm text-slate-400">Raised by:</p>
+            <p>Mark Jacobs</p>
+        </div>
+        <div>
+            <p class="text-sm text-slate-400">Plot:</p>
+            <p class="text-[#1696AF] font-semibold underline cursor-pointer">Plot 1, 26 Aspen Mews</p>
+        </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-2">
+        <div class="lg:basis-3/5 order-2 lg:order-1">
+            <%= render(ComplaintsComponent.new) do %>
+            <% end %>
+        </div>
+        <div class="lg:basis-2/5 order-1 lg:order-2">
+        <div class="bg-white p-6 border shadow-sm bg-white rounded-md">
+            <h3 class="text-lg mb-6 font-light">Complaint Details</h3>
+            <p class="mb-8 text-slate-500">The resident has a number of issues that he feels havnt been resolved within an acceptable timeline and would like us to escalate the issues to a complaint.</p>
+            <%= render(ButtonComponent.new(type: :outline)) do %>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                </svg>
+            Add note
+            <% end %>
+        </div>
+    </div>
+</section>
+
+<section class="mx-auto mt-4 px-5">
+    <h3 class="my-6 text-lg font-light">Latest Activity</h3>
+        <div class="flex flex-col gap-4">
+            <%= render(ActivityComponent.new(title: "Inbound Phone Call", message: "Customer called for a progress update. Explained that we woud be sending her a path to resolution letter within the next 3 days.")) do %>
+            <% end %>
+            <%= render(ActivityComponent.new(title: "Outbound Phone Call", message: "A really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really really long phone call")) do %>
+            <% end %>
+            <%= render(ActivityComponent.new(title: "Inbound Phone Call", message: "Short call.")) do %>
+            <% end %>
+        </div>
+</section>
+
+
+<div class="mb-24">
+</div>
+
+
+
+</div>
