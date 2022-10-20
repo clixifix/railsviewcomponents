@@ -2,7 +2,7 @@
     <% end %>
 
 <div class="px-5 bg-slate-200">
-    <%= render(BreadcrumbComponent.new) do %>
+    <%= render(BreadcrumbComponent.new(breadcrumbs:[{'url'=>'#', 'text'=>'Schemes'},{'url'=>'#','text'=>'Complaints'}, {'url' =>'#', 'text'=>'Complaint 2343'}])) do %>
     <% end %>
 </div>
 
